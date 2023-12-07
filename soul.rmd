@@ -1,0 +1,24 @@
+---
+title: "Sample Document"
+output: html_document
+---
+# Mi primera prueba
+```{r}
+library(ggplot2)
+library(tidyverse)
+library(ggdark)
+diamonds%>%str
+
+diamonds %>%
+ggplot(aes(cut, price, fill = cut)) +
+    geom_boxplot() +
+    dark_theme_grey()
+
+knitr::kable(
+    mtcars[1:5, ], 
+    caption = "A knitr kable."
+)
+```
+
+
+
